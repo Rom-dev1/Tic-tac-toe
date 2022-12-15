@@ -1,0 +1,21 @@
+body{
+    font-family: Permanent Marker;
+    
+}
+.display{
+    display: flex;
+    flex-wrap: wrap;
+    width: 310px;
+    margin: auto;
+}
+   
+
+
+.box{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
