@@ -1,21 +1,29 @@
 body{
     font-family: Permanent Marker;
-    
+    font-size : 64px
+
 }
 .display{
     display: flex;
     flex-wrap: wrap;
-    width: 310px;
+    width: 30%;
+    height: 350px;
     margin: auto;
 }
    
 
 
 .box{
-    width: 100px;
-    height: 100px;
+    width: 32%;
+    height: 33%;
     border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+h2{
+    font-size: 32px;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
