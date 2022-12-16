@@ -4,16 +4,39 @@ let boxes = document.querySelectorAll('.box')
 let caseEmpty = ["","","","","","","","",""]
 let tour = 0
 let player = document.getElementById("player")
-    for (let box of boxes){
-        box.addEventListener('click', add)
-        console.log(caseEmpty)
+    
+
+let move = document.getElementsByClassName("move")
+let flex = document.querySelector(".flex")
+let accueil = document.getElementById("accueil")
+let up = document.getElementById('up')
+let morpion = document.getElementById('display')
+
+
+
+function menu(){
+    for (let deplace of move)
+    deplace.addEventListener('click', toTop)
+} 
+
+function toTop(){
+    if(this.classList.contains('move')){
+        this.classList.toggle('arrival')
     }
+    setTimeout(() =>{
+        up.style.display = 'none'
+        accueil.style.display ='none'
+        morpion.style.zIndex = '1'
+    }, 2000)
+}  
 
-
-
+for (let box of boxes){
+    box.addEventListener('click', add)
+    console.log(caseEmpty)
+}    
 function add(){
     
-       if(this.textContent == ""){
+       if(this.textContent == ""){ 
             
             if(tour%2 == 0){
             this.textContent = 'x'
@@ -29,7 +52,7 @@ function add(){
             tour++
 
             if(caseEmpty[0] == caseEmpty[1] && caseEmpty[1] == caseEmpty[2] && caseEmpty[0] != ''){
-                alert('win')
+               
             }
             else if (caseEmpty[3] == caseEmpty[4] && caseEmpty[4] == caseEmpty[5] && caseEmpty[3] != ''){
                 alert('win')
@@ -58,7 +81,14 @@ function add(){
                 
     console.log(caseEmpty)
     }
-}       
+}  
+function restart(){
+    caseEmpty = ['','','','','','','','','']
+    console.log(caseEmpty)
+    for (let box of boxes){
+        box.textContent = ""
+    }
+}     
 
   
     

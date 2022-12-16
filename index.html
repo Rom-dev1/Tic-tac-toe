@@ -8,8 +8,22 @@
     <title>Tic-tac-toe</title>
 </head>
 <body>
-    <div class="display">
-
+    
+    
+    <div class="move" id="up">
+    
+        <div id="accueil">
+            <h1>Bienvenue</h1>
+            <button id="menu" onclick="menu()">On joue ?</button>
+        </div>
+    </div>
+    <div class="choice">
+        <a href="morpion">morpion</a>
+        <a href="Devine mot"></a>
+        <a href="Puissance 4 "></a>
+    </div>
+    <div id="display">
+        
         <div class="box" data-class="0"></div>
         <div class="box" data-class="1"></div>
         <div class="box" data-class="2"></div>
@@ -22,7 +36,7 @@
 
     </div>
     <h2 id="player">Au tour du 1er joueur</h2>
-
+    <button id="btn" onclick="restart()">On recommence</button>
     <script src="script.js"></script>
 </body>
 </html>
